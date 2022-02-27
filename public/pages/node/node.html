@@ -56,14 +56,19 @@
             <li><a href="#node"> Node-command</a></li>
             <li><a href="#package">Package.json</a></li>
             <li><a href="#npm-init">npm init</a></li>
+            <li><a href="#npm-install">npm install</a></li>
+            <li><a href="#npm-run">npm run</a></li>
+            <li><a href="#nodemon">nodemon</a></li>
+
             
-        </ull>
+        </ul>
     </div>
 </div>
 <section id="intro">
     <p class="intro-class">
         <h3>Introduction</h3>
         Node.js is an open-source and cross-platform runtime environment built on Chrome’s V8 JavaScript engine for executing JavaScript code outside of a browser. You need to recollect that NodeJS isn’t a framework, and it’s not a programing language. It provides an event-driven, non-blocking (asynchronous) I/O and cross-platform runtime environment for building highly scalable server-side applications using JavaScript.
+        
     </p>
 </section>
 <section id="why">
@@ -162,6 +167,53 @@
       provide an url to the git repository (if any) etc.<br>
     </p>
 </section>
+<section id="npm-install">
+    <p class="npm-install-class">
+        <h3>npm install</h3>
+          <code>npm install</code> 
+          command is used to create a package.json file from scratch, if no such file exists.<br><br>
+            When running the command with no arguments,
+          a short guide appears asking you questions to help populate the resulting package.json.<br>
+          As an example you will be asked to name the package, provide a version (1.0.0 by default),
+          provide an url to the git repository (if any) etc.<br>
+        </p>
+    </section>
+    <section id="npm-run">
+        <p class="npm-run-class">
+            <h3>npm install</h3>
+              <code>npm run</code> 
+              This command will run an arbitrary command from the package.json file.<br><br>
+                    Commands can be specified in the <code class="language-json">"scripts"</code> object,
+                    which can contain multiple commands<br><br>
+                    If no command name is specified as an argument, a list of available commands (if any) will be
+                    returned.
+            </p>
+        </section>
+
+        <section id="nodemon">
+            <p class="nodemon-class">
+                <h3>nodemon</h3>
+                  This command will run an arbitrary command from the package.json file.<br><br>
+                        Commands can be specified in the <code class="language-json">"scripts"</code> object,
+                        which can contain multiple commands
+                        If no command name is specified as an argument, a list of available commands (if any) will be
+                        returned."Nodemon is a tool that helps develop node.js based applications
+                        by automatically restarting the node application when file changes in the directory are
+                        detected."This makes it a very useful development tool as any files changes will cause nodemon to re-run your application,
+                        making your changes available without the hassle of stopping the running node process and starting
+                        it again.To run a javascript file through nodemon you replace the normal the node command with
+                        nodemon.Nodemon is recommended to be installed globally, but can also be installed as a development
+                        dependency.
+                        If installed globally it will be available to be run by every Node.js project on the system.
+                        If installed locally as a development dependency,
+                        it will only be available to the speific project in which it was installed.<br><br>
+                        <h6>Global install</h6>
+                        <code>npm install -g nodemon</code><br>
+                        <h6>Local install as development dependency</h6>
+                        <code>npm install --save-dev nodemon</code><br>
+                </p>
+            </section>
+    
 
 
 
