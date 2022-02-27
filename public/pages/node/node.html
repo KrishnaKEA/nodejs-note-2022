@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+        <link rel="stylesheet" href="node.css">
+    <title>Node</title>
+</head>
+<body>
+    <div class="container container-nav" id="navbar-top">
+        <nav class="navbar navbar-expand-md navbar-light bg-light rounded">
+            <div class="container-fluid">
+                <div
+                    class="collapse navbar-collapse justify-content-md-center"
+                    id="navbarsExampleDefault"
+                >
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/notes/javascript"
+                                >Javascript</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/notes/nodejs">Node.js</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/notes/express">Express</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/notes/express">Commandline</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/notes/express">Code-snippets</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="card container-contents bg-light tableofcontent">
+        <h5>Table of Contents</h5>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#why">Why node.js?</a></li>
+            <li><a href="#getstarted">Get started</a></li>
+            <li><a href="#npm">Node package manager(npm)</a></li>
+            <li><a href="#node"> Node-command</a></li>
+            <li><a href="#package">Package.json</a></li>
+            <li><a href="#npm-init">npm init</a></li>
+            
+        </ull>
+    </div>
+</div>
+<section id="intro">
+    <p class="intro-class">
+        <h3>Introduction</h3>
+        Node.js is an open-source and cross-platform runtime environment built on Chrome’s V8 JavaScript engine for executing JavaScript code outside of a browser. You need to recollect that NodeJS isn’t a framework, and it’s not a programing language. It provides an event-driven, non-blocking (asynchronous) I/O and cross-platform runtime environment for building highly scalable server-side applications using JavaScript.
+    </p>
+</section>
+<section id="why">
+    <p class="why-class">
+        <h3>Why node.js?</h3>
+        There could be several reasons to choose node.js. Here are the top reasons which are listed below.
+        <ul>
+            <li>Open-source and cross-platform</li>
+            <li>Easy to scale up in the future</li>
+            <li>Easy to learn</li>
+            <li>Huge community support</li>
+            <li>Fast</li>
+            <li>Realtime web apps </li>
+        </ul>
+    </p>
+</section>
+<section id="getstarted">
+    <p class="getstarted-class">
+        <h3>Getting started</h3>
+        To be able to work on node.js project we need to install node. Which can be easyly installed <a href="https://nodejs.org/en/download/">nodejs official website</a>.There we could choose the different versions 
+        and different platforms.Installing node to the system it also installs the node package manager (NPM).After the installation we could check if node is properly installed or not,in the command line or terminal
+        type <code> node -v</code>. Then it shows the node version which is installed in the system.<code>v16.13.2</code>. Sometime you may have alreday node installed and you want to update the recent version of node
+        then you just install the newer version which replaces the older version.Then we can check the npm as well by typing <code>npm -v</code> and it shows, something like this.<code>8.1.2</code>
+    </p>
+</section>
+</section>
+<section id="npm">
+    <p class="npm-class">
+        <h3>Node package manager(npm)</h3>
+       Node package manager is the default package manager for the javascript runtime environment node.js.It consists of a command line client, also called npm, and an online database of public and paid-for private packages, 
+       called the npm registry. The registry is accessed via the client, and the available packages can be browsed and searched via the npm website. The package manager and the registry are managed by npm, Inc.Which is written
+       in JavaScript.
+    </p>
+</section>
+<section id="node">
+    <p class="node-class">
+        <h3>Node-command</h3>
+            After successfully installation of node on our machine we can type command <code>node</code>in terminal, which allows to write our javascript out of the browser. Before we were only allowed to use javascript in browser 
+            but now with the help of node we are able to run javascript anywhere.This is a beauty of node.
+        <pre>
+            <code>
+                macbook@Developer-Krishna Nodejs-note % node
+                Welcome to Node.js v16.13.2.
+                Type ".help" for more information.
+                > 3+3
+                6
+            </code> 
+        </pre>
+      
+    </p>
+</section>
+
+<section id="package">
+    <p class="package-class">
+        <h3>Package.json</h3>
+        The package.json is a json file that all npm packages contains, usually in the root directory.<br>
+        The file holds metadata relevant to the project.<br>
+        This could be the project name, version, needed dependencies and so on.<br><br>
+        Following the JSON data format the fields are divided into key:value pairs,<br>
+        with the possibility for objects, like the dependencies object, to hold multiple key:value pairs.
+        <pre>
+            <code>
+                {
+                    "name": "nodejs-note",
+                    "version": "1.0.0",
+                    "description": "This is the mandatory assignment project in fourth semester2022",
+                    "main": "app.js",
+                    "scripts": {
+                      "test": "echo \"Error: no test specified\" && exit 1"
+                    },
+                    "keywords": [
+                      "note",
+                      "node",
+                      "express"
+                    ],
+                    "author": "Krishna Prasad Khanal",
+                    "license": "MIT",
+                    "dependencies": {
+                      "express": "^4.17.3",
+                      "g": "^2.0.1",
+                      "nodemon": "^2.0.15"
+                    }
+                  }
+            </code>
+        </pre>
+    </p>
+</section>
+<section id="npm-init">
+    <p class="npm-init-class">
+        <h3>npm init</h3>
+      <code>npm init</code> 
+      command can be used to create a package.json file from scratch, if no such file exists.<br><br>
+        When running the command with no arguments,
+      a short guide appears asking you questions to help populate the resulting package.json.<br>
+      As an example you will be asked to name the package, provide a version (1.0.0 by default),
+      provide an url to the git repository (if any) etc.<br>
+    </p>
+</section>
+
+
+
+
+
+    <script src="node.js"></script>
+</body>
+</html>

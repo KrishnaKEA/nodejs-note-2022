@@ -1,0 +1,23 @@
+.tableofcontent {
+	text-align: center;
+	height: auto;
+	width: 50%;
+	margin: auto;
+	background-color: aqua !important;
+}
+.tableofcontent ul {
+	list-style: none;
+}
+body {
+	background-color: aqua;
+}
+.history-class {
+	padding: 5%;
+}
+section {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#navbar-top {
+	background-color: aqua !important;
+}

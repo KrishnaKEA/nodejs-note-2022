@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-note",
+  "version": "1.0.0",
+  "description": "This is the mandatory assignment project in fourth semester2022",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "note",
+    "node",
+    "express"
+  ],
+  "author": "Krishna Prasad Khanal",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "g": "^2.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
