@@ -1,6 +1,6 @@
 
 
-        <div class="card container-contents bg-light tableofcontent">
+        <div class="card container-contents">
             <h5>Topics</h5>
             <ul>
                 <li><a href="#introduction">Introduction</a></li>
@@ -14,145 +14,150 @@
             </ull>
         </div>
     </div>
-    <section id="introduction">
-        <p class="history-class">
-            <h3>Javascript Introduction</h3>
-            JavaScript is the world most popular lightweight,synchronous single-thread, interpreted compiled programming language.It is also known as scripting language for web pages. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments as well as Server-side developments.
-            We can use javascript to make interactive webpages,desktop apps, mobile apps,webservers,games and drawing.We can use javascript in the html pages. Thare are two ways to include javascript in the htmlpage.<strong>Internal-</strong> we can use script tag in the html page and use it. <strong>External-</strong> We can make a javascript file outside of the html page(where ever) and 
-            use it by providing src path.
-        </p>
-
-    </section>
-    <section id="datatypes">
-        <p class="datatypes-class">
-            <h3>Data types in Javascript</h3>
-            Data types basically specify what kind of data can be stored and manipulated within a program.
-            There are six basic data types in JavaScript which can be divided into three main categories: primitive (or primary), composite (or reference), and special data types. String, Number, and Boolean are primitive data types. Object, Array, and Function (which are all types of objects) are composite data types. Whereas Undefined and Null are special data types.
-            Primitive data types can hold only one value at a time, whereas composite data types can hold collections of values and more complex entities. Let's discuss each one of them in detail.
-        </p>
-
-    </section>
-    <section id="variables">
-        <p class="variables-class">
-            <h3>Variables</h3>
-            A variable is a “named storage” for data.There are mainly three ways of defining variables.let,const and var. In modern javascript we are recomended to use only let and var keywords.
-            we use let keyword to define a non constant variable i.e it could be changed in future where as we use const to define a constant variable which won't be changed in future.In case of object and array,even we define the const array we still can change the array items but not the name of the array likewise we in object even we defined an object const we still can change the property of that object but not object name.
-        </p>
-
-    </section>
-    <section id="functions">
-        <p class="functions-class">
-            <h3>Functions</h3>
-            Functions are one of the fundamental building blocks in Javascript.
-                    They can take input in terms of parameters, and perform a task or calculate a value,
-                    which can then be returned via the <code>return</code>
-                    keyword.
-
-                    Function declarations are hoisted in Javascript, which means that it is possible to call a
-                    function
-                    before it is declared.
-
-                    
-                    Functions in javascript are also said to be first-class citizens.
-                    Which means they are treated as any other variable and that a function can  be passed as an argument to another function, returned from another function and assigned as a value to a variable.
-                    Since functions are treated as first-class citizens it is possible to define a function as an expression. This can be useful if you want to assign a function to a variable.
-                    It is possible to do by either assigning the function with a function name (a named function expression) or without (an anonymous function expression).
-                    One of the benefits of providing a name is that if an error is encountered, the stack trace will contain the name of the function, making it easier to find the origin of the error.
-                    <h5> Types of fucntions</h5>
-                    <ul>
-                        
-                        <li><strong>Normal functions-</strong> Functions are declared by the <code>function</code> keyword,
-                            a name for the function, a pair of parantheses containing the parameters (if any),
-                            and lastly followed by a pair of curly brackets encapsulating the scope of the function.
-                        </li>
-                        <li><strong>Callback functions-</strong> A callback function is a function that is passed into another function as an argument. This function is then invoked inside the outer function (also called a higher-order function), at a "later time".
-                            Usually this outer function will implement some type of logic that defines when the callback function gets executed.
-                            When passing a named function as a callback it is important to pass only the function name and not appending parenthesis as you want to pass the reference, and not call the actual function.
-                            Two types of callback functions exist.
-                            Synchronous, which is executed immediately - and asynchronous which will be executed at a later time, defined by the function in which the callback is passed to.</li>
-                        <li><strong>Anonymous functions-</strong> is a function that does not have any name associated with it. Normally we use the function keyword before the function name to define a function in JavaScript, however, in anonymous functions in JavaScript, we use only the function keyword without the function name.
-
-                            An anonymous function is not accessible after its initial creation, it can only be accessed by a variable it is stored in as a function as a value. An anonymous function can also have multiple arguments, but only one expression.</li>
-                        <li><strong>Arrow functions-</strong> An arrow function is an alternative to a traditional function expression. They can roughly be compared to lambda functions, as seen in Java or Python. They are anonymous in the sense that they have no name, and operate in context of their enclosing scope. For example in a surrounding function.
-                            Arrow functions are created without the function keyword and requires an arrow => to be placed between the argument(s) and opening body bracket.
-                           The return keyword is also omitted as the result of the expression will be returned by the function.</li>
-                        <li><strong>higher-order functions-</strong>
-                            In Javascript, functions can be assigned to variables in the same way that strings or arrays can. They can be passed into other functions as parameters or returned from them as well.
-                            A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
-                        
-                        </li>
-
-
-                    </ul>
-
-        </p>
-
-    </section>
-    <section id="arrays">
-    <div class="arrays-class">
-        <h3>Arrays</h3>
-<p>
-    In JavaScript, array is a single variable that is used to store different elements. It is often used when we want to store list of elements and access them by a single variable. Unlike most languages where array is a reference to the multiple variable, in JavaScript array is a single variable that stores multiple elements.
-    <h5>Array Methods</h5>
-    <ul>
-        <li><strong>Map-</strong>
-            The map() method is available for every array created in Javascript.
-            It is used to loop through an array and perform a provided callback function, once for each element in the array. While doing this the method constructs a new array, which is returned when no more elements can be traversed in the original array.
-            The map method does not mutate the array on which it is called, and should only be used when it is desirable to create a new array from performing operations on an existing one.
-            The method takes a callback as the first argument, which is called on every element of the array.
-            This argument in turn takes the following arguments:
-            required
-            currentValue which is the current element being processed.
-            optional
-            index which is the index of the current element being processed.
-            More arguments are available, as seen in the source link.
-        </li>
-        <li><strong>Filter</strong>
-        The filter() method creates a new array with all elements that pass the test implemented by the provided function.
-        Parameters
-        callbackfunction 
-        Function is a predicate, to test each element of the array. Return a value that coerces to true to keep the element, or to false otherwise.
-        It accepts three arguments:<em>element</em>The current element being processed in the array.<em>indexOptional</em>
-        The index of the current element being processed in the array.<em>arrayOptional</emThe array on which filter() was called.
-        <em>thisArgOptional</em>
-        Value to use as this when executing callbackFn.
-
-
+    <div class="card">
+        <div class="card-body">
+            <section id="introduction">
+                <p class="history-class">
+                    <h3>Javascript Introduction</h3>
+                    JavaScript is the world most popular lightweight,synchronous single-thread, interpreted compiled programming language.It is also known as scripting language for web pages. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments as well as Server-side developments.
+                    We can use javascript to make interactive webpages,desktop apps, mobile apps,webservers,games and drawing.We can use javascript in the html pages. Thare are two ways to include javascript in the htmlpage.<strong>Internal-</strong> we can use script tag in the html page and use it. <strong>External-</strong> We can make a javascript file outside of the html page(where ever) and 
+                    use it by providing src path.
+                </p>
         
-        </li>
-        <li><strong>reduce</strong>
-            The reduce() method is available for every array created in Javascript.
-            It is used to loop through an array and execute a callback (a reducer function) on each element of the array, resulting in a single output value.
-            The method takes a callback as the first argument, which is called on every element of the array.
-            This argument in turn takes the following arguments:
-            required accumulator which accumulates the callbacks return values.
-            This means that for every element, the output of the callback is stored in the accumulator.
-            currentValue which is the current element being processed.
-            optional
-            index which is the index of the current element being processed.
-      </li>
-    </ul>
-</p>
-
-
-
-</div>
-
-    </section>
-    <section id="spread">
-        <p class="spread-class">
-            <h3>Spread operator</h3>
-            Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
-            Spread syntax can be used when all elements from an object or array need to be included in a list of some kind
+            </section>
+            <section id="datatypes">
+                <p class="datatypes-class">
+                    <h3>Data types in Javascript</h3>
+                    Data types basically specify what kind of data can be stored and manipulated within a program.
+                    There are six basic data types in JavaScript which can be divided into three main categories: primitive (or primary), composite (or reference), and special data types. String, Number, and Boolean are primitive data types. Object, Array, and Function (which are all types of objects) are composite data types. Whereas Undefined and Null are special data types.
+                    Primitive data types can hold only one value at a time, whereas composite data types can hold collections of values and more complex entities. Let's discuss each one of them in detail.
+                </p>
+        
+            </section>
+            <section id="variables">
+                <p class="variables-class">
+                    <h3>Variables</h3>
+                    A variable is a “named storage” for data.There are mainly three ways of defining variables.let,const and var. In modern javascript we are recomended to use only let and var keywords.
+                    we use let keyword to define a non constant variable i.e it could be changed in future where as we use const to define a constant variable which won't be changed in future.In case of object and array,even we define the const array we still can change the array items but not the name of the array likewise we in object even we defined an object const we still can change the property of that object but not object name.
+                </p>
+        
+            </section>
+            <section id="functions">
+                <p class="functions-class">
+                    <h3>Functions</h3>
+                    Functions are one of the fundamental building blocks in Javascript.
+                            They can take input in terms of parameters, and perform a task or calculate a value,
+                            which can then be returned via the <code>return</code>
+                            keyword.
+        
+                            Function declarations are hoisted in Javascript, which means that it is possible to call a
+                            function
+                            before it is declared.
+        
+                            
+                            Functions in javascript are also said to be first-class citizens.
+                            Which means they are treated as any other variable and that a function can  be passed as an argument to another function, returned from another function and assigned as a value to a variable.
+                            Since functions are treated as first-class citizens it is possible to define a function as an expression. This can be useful if you want to assign a function to a variable.
+                            It is possible to do by either assigning the function with a function name (a named function expression) or without (an anonymous function expression).
+                            One of the benefits of providing a name is that if an error is encountered, the stack trace will contain the name of the function, making it easier to find the origin of the error.
+                            <h5> Types of fucntions</h5>
+                            <ul>
+                                
+                                <li><strong>Normal functions-</strong> Functions are declared by the <code>function</code> keyword,
+                                    a name for the function, a pair of parantheses containing the parameters (if any),
+                                    and lastly followed by a pair of curly brackets encapsulating the scope of the function.
+                                </li>
+                                <li><strong>Callback functions-</strong> A callback function is a function that is passed into another function as an argument. This function is then invoked inside the outer function (also called a higher-order function), at a "later time".
+                                    Usually this outer function will implement some type of logic that defines when the callback function gets executed.
+                                    When passing a named function as a callback it is important to pass only the function name and not appending parenthesis as you want to pass the reference, and not call the actual function.
+                                    Two types of callback functions exist.
+                                    Synchronous, which is executed immediately - and asynchronous which will be executed at a later time, defined by the function in which the callback is passed to.</li>
+                                <li><strong>Anonymous functions-</strong> is a function that does not have any name associated with it. Normally we use the function keyword before the function name to define a function in JavaScript, however, in anonymous functions in JavaScript, we use only the function keyword without the function name.
+        
+                                    An anonymous function is not accessible after its initial creation, it can only be accessed by a variable it is stored in as a function as a value. An anonymous function can also have multiple arguments, but only one expression.</li>
+                                <li><strong>Arrow functions-</strong> An arrow function is an alternative to a traditional function expression. They can roughly be compared to lambda functions, as seen in Java or Python. They are anonymous in the sense that they have no name, and operate in context of their enclosing scope. For example in a surrounding function.
+                                    Arrow functions are created without the function keyword and requires an arrow => to be placed between the argument(s) and opening body bracket.
+                                   The return keyword is also omitted as the result of the expression will be returned by the function.</li>
+                                <li><strong>higher-order functions-</strong>
+                                    In Javascript, functions can be assigned to variables in the same way that strings or arrays can. They can be passed into other functions as parameters or returned from them as well.
+                                    A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
+                                
+                                </li>
+        
+        
+                            </ul>
+        
+                </p>
+        
+            </section>
+            <section id="arrays">
+            <div class="arrays-class">
+                <h3>Arrays</h3>
+        <p>
+            In JavaScript, array is a single variable that is used to store different elements. It is often used when we want to store list of elements and access them by a single variable. Unlike most languages where array is a reference to the multiple variable, in JavaScript array is a single variable that stores multiple elements.
+            <h5>Array Methods</h5>
+            <ul>
+                <li><strong>Map-</strong>
+                    The map() method is available for every array created in Javascript.
+                    It is used to loop through an array and perform a provided callback function, once for each element in the array. While doing this the method constructs a new array, which is returned when no more elements can be traversed in the original array.
+                    The map method does not mutate the array on which it is called, and should only be used when it is desirable to create a new array from performing operations on an existing one.
+                    The method takes a callback as the first argument, which is called on every element of the array.
+                    This argument in turn takes the following arguments:
+                    required
+                    currentValue which is the current element being processed.
+                    optional
+                    index which is the index of the current element being processed.
+                    More arguments are available, as seen in the source link.
+                </li>
+                <li><strong>Filter</strong>
+                The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+                Parameters
+                callbackfunction 
+                Function is a predicate, to test each element of the array. Return a value that coerces to true to keep the element, or to false otherwise.
+                It accepts three arguments:<em>element</em>The current element being processed in the array.<em>indexOptional</em>
+                The index of the current element being processed in the array.<em>arrayOptional</emThe array on which filter() was called.
+                <em>thisArgOptional</em>
+                Value to use as this when executing callbackFn.
+        
+        
+                
+                </li>
+                <li><strong>reduce</strong>
+                    The reduce() method is available for every array created in Javascript.
+                    It is used to loop through an array and execute a callback (a reducer function) on each element of the array, resulting in a single output value.
+                    The method takes a callback as the first argument, which is called on every element of the array.
+                    This argument in turn takes the following arguments:
+                    required accumulator which accumulates the callbacks return values.
+                    This means that for every element, the output of the callback is stored in the accumulator.
+                    currentValue which is the current element being processed.
+                    optional
+                    index which is the index of the current element being processed.
+              </li>
+            </ul>
         </p>
-    </section>
-    <section id="passby">
-        <p class="passby-class">
-            <h3>Pass By Reference vs Pass By Value</h3>
-            Primitive arguments (numbers for example) are passed by value, whereas objects are passed by reference.
-            This means that a change in a numbers value would not be reflected globally, whereas a change in an objects state would be visible outside of the function.
-        </p>
-    </section>
+        
+        
+        
+        </div>
+        
+            </section>
+            <section id="spread">
+                <p class="spread-class">
+                    <h3>Spread operator</h3>
+                    Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+                    Spread syntax can be used when all elements from an object or array need to be included in a list of some kind
+                </p>
+            </section>
+            <section id="passby">
+                <p class="passby-class">
+                    <h3>Pass By Reference vs Pass By Value</h3>
+                    Primitive arguments (numbers for example) are passed by value, whereas objects are passed by reference.
+                    This means that a change in a numbers value would not be reflected globally, whereas a change in an objects state would be visible outside of the function.
+                </p>
+            </section>
+        </div>
+    </div>
+   
 
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

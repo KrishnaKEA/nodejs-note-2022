@@ -4,7 +4,6 @@ const app = express();
 app.use(express.static("public"));
 
 const fs = require("fs");
-
 const nav = fs.readFileSync("./public/components/navbar.html").toString();
 
 const home = fs.readFileSync("./public/pages/home/home.html").toString();

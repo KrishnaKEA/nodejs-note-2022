@@ -1,150 +1,174 @@
-<div class="card container-contents bg-light tableofcontent">
+<div class="card container-contents bg-light">
     <h5>Topics</h5>
     <ul>
         <li><a href="#intro">Introduction</a></li>
-        <li><a href="#why">Why node.js?</a></li>
+        <li><a href="#why">Why express?</a></li>
         <li><a href="#getstarted">Get started</a></li>
         <li><a href="#port">Server port</a></li>
         <li><a href="#env"> Environmental variable</a></li>
         <li><a href="#cross-env">Cross-env</a></li>
         <li><a href="#jparser">Json parser</a></li>
         <li><a href="endpoint">Endpoints</a></li>
-        <li><a href="#npm-run">npm run</a></li>
-        <li><a href="#nodemon">nodemon</a></li>
+        <li><a href="#req-res">Request and response</a></li>
+        <li><a href="#static">Static content</a></li>
 
         
     </ul>
 </div>
 </div>
-<section id="intro">
-<p class="intro-class">
-    <h3>Introduction</h3>
-    Express is a fast, unopinionated, minimalist web framework for Node.js".<br>
-    Express can be used to create web applications or create APIs and is perhaps the most used Node.js server framework.
-    Express is a Node.js module and can as such be installed through the node package manager (npm).<br>
-    This is done by running the <code>npm install express</code> command.<br>
-    Alternatively one could add the dependency to the package.json file and simply run <code>npm install</code>
-    to install any uninstalled dependencies.
-    
-</p>
-</section>
-<section id="why">
-<p class="why-class">
-    <h3>Why Express?</h3>
-    It is used for designing and building web applications quickly and easily . Web applications are web apps that you can run on a web browser. Since Express. js only requires javascript, it becomes easier for programmers and developers to build web applications and API without any effort.
-</p>
-</section>
-<section id="getstarted">
-<p class="getstarted-class">
-    <h3>Getting started</h3>
-    To get started using express in our project we need to import express module by using <code>const express = require('express')
-    </code> then we can create the server <code>
-        const app = express()</code>.
-</p>
-</section>
-</section>
-<section id="port">
-<p class="port-class">
-    <h3>Listening port </h3>
-   After initializing the server we need to assign the port so that server can be assesed by mentioning that port.
-   <code> app.listen(3000,()=>{console.log("server is running at portnumber "+ 3000)})</code>.<br>
-   There could be the different ports for production and development environment. We can assign port with fallback port.
-   <code>const PORT = process.env.PORT || 3000;</code>. Here the port number 3000 is fallback port, If the server
-   can not find the assigned port it just use the fallback port.
-</p>
-</section>
-<section id="env">
-<p class="env-class">
-   <h3>Environment variables</h3>
-   In the realworld scenario, there are several stages of code writing such as development stage,testing stage and production stage. 
-   For every stage it is better to assign the server port separately.But hard coded port are not easy to handle so that we use the environmental variables.
-   Environment variables are a fundamental part of developing with Node.js, allowing your app to behave differently based on the environment you want them to run in. 
-   Wherever your app needs configuration, you use environment variables. <br>
-   <code>const PORT = process.env.PORT || 3000;</code>. <br>
-   
-  
-</p>
-</section>
-
-<section id="cross-env">
-<p class="cross-env-class">
-    <h3>Cross-env</h3>
-While working in a big company. There are several developer,tester and designer. They use different computer with 
-different environments. Using the environment variable and managing it according to their environment is painful. But cross-env npm package will help us to get rid of that pain.
-This package allows environment variables to be set in one way for every platform.To install this package we use <code>npm install --global cross-env</code>
-<pre>
-    <code>
-        {
-            "scripts": {
-              "start-dev": "cross-env PORT=3000 nodemon app.js",
-              "start": "node app.js"
-            },
-            "dependencies": {
-              "express": "^4.17.2"
-            },
-            "devDependencies": {
-              "cross-env": "^7.0.3"
-            }
-          }
-    </code>
-</pre>
-After installing it, we could see the cross-env in our package.json. After that we can add the cross-env in script.
-<pre>
-    <code>
-        "scripts": {
-            "start-dev": "cross-env PORT=3000 nodemon app.js",
-            "start": "node app.js"
-          },
-    </code>
-</pre>
-
-
-</p>
-</section>
-<section id="jparser">
-<p class="jparser-class">
-    <h3>Json parser</h3>
-    In order to be able to parse json in express you must configure it through the "app" object.<br>
-    This can be done in a simple line:<br>
-    <code>app.use(express.json())</code><br>
-    This is important to do when creating REST apis. Without it express won't be able to parse json requests
-    and so you will not be able to use data recieved through requests using GET, PUT etc.
- 
-</p>
-</section>
-<section id="endpoint">
-<p class="endpoint-class">
-    <h3>Endpoints</h3>
-    Endpoints are a way of defining an "access point" for a client to communicate with the express server.
-                    An endpoint consists of a URI and a specific HTTP request method
-                    like <code>GET</code> <code>POST</code> and
-                    so on.
-
-                    Endpoints are created by calling the HTTP specific verb on the app variable:<br><br>
-                    <code>app.get</code><br>
-                    <code>app.put</code><br>
-                    <code>app.delete</code><br>
-                    and so on...<br><br>
-
-                    An endpoint will take the arguments of a path and a callback.<br><br>
-                    In the callback you provide the parameter "req" and "res" which can be used to interact with the
-                    incoming request or the outgoing response.<br>
-      
-    </p>
-</section>
-<section id="npm-run">
-    <p class="npm-run-class">
-        <h3>npm install</h3>
-          <code>npm run</code> 
-          
-        </p>
-    </section>
-
-    <section id="nodemon">
-        <p class="nodemon-class">
-            <h3>nodemon</h3>
+<div class="card">
+    <div class="card-body">
+        <section id="intro">
+            <p class="intro-class">
+                <h3>Introduction</h3>
+                Express is a fast, unopinionated, minimalist web framework for Node.js".<br>
+                Express can be used to create web applications or create APIs and is perhaps the most used Node.js server framework.
+                Express is a Node.js module and can as such be installed through the node package manager (npm).<br>
+                This is done by running the <code>npm install express</code> command.<br>
+                Alternatively one could add the dependency to the package.json file and simply run <code>npm install</code>
+                to install any uninstalled dependencies.
+                
+            </p>
+            </section>
+            <section id="why">
+            <p class="why-class">
+                <h3>Why Express?</h3>
+                It is used for designing and building web applications quickly and easily . Web applications are web apps that you can run on a web browser. Since Express. js only requires javascript, it becomes easier for programmers and developers to build web applications and API without any effort.
+            </p>
+            </section>
+            <section id="getstarted">
+            <p class="getstarted-class">
+                <h3>Getting started</h3>
+                To get started using express in our project we need to import express module by using <code>const express = require('express')
+                </code> then we can create the server <code>
+                    const app = express()</code>.
+            </p>
+            </section>
+            </section>
+            <section id="port">
+            <p class="port-class">
+                <h3>Listening port </h3>
+               After initializing the server we need to assign the port so that server can be assesed by mentioning that port.
+               <code> app.listen(3000,()=>{console.log("server is running at portnumber "+ 3000)})</code>.<br>
+               There could be the different ports for production and development environment. We can assign port with fallback port.
+               <code>const PORT = process.env.PORT || 3000;</code>. Here the port number 3000 is fallback port, If the server
+               can not find the assigned port it just use the fallback port.
+            </p>
+            </section>
+            <section id="env">
+            <p class="env-class">
+               <h3>Environment variables</h3>
+               In the realworld scenario, there are several stages of code writing such as development stage,testing stage and production stage. 
+               For every stage it is better to assign the server port separately.But hard coded port are not easy to handle so that we use the environmental variables.
+               Environment variables are a fundamental part of developing with Node.js, allowing your app to behave differently based on the environment you want them to run in. 
+               Wherever your app needs configuration, you use environment variables. <br>
+               <code>const PORT = process.env.PORT || 3000;</code>. <br>
+               
               
             </p>
-        </section>
+            </section>
+            
+            <section id="cross-env">
+            <p class="cross-env-class">
+                <h3>Cross-env</h3>
+            While working in a big company. There are several developer,tester and designer. They use different computer with 
+            different environments. Using the environment variable and managing it according to their environment is painful. But cross-env npm package will help us to get rid of that pain.
+            This package allows environment variables to be set in one way for every platform.To install this package we use <code>npm install --global cross-env</code>
+            <pre>
+                <code>
+                    {
+                        "scripts": {
+                          "start-dev": "cross-env PORT=3000 nodemon app.js",
+                          "start": "node app.js"
+                        },
+                        "dependencies": {
+                          "express": "^4.17.2"
+                        },
+                        "devDependencies": {
+                          "cross-env": "^7.0.3"
+                        }
+                      }
+                </code>
+            </pre>
+            After installing it, we could see the cross-env in our package.json. After that we can add the cross-env in script.
+            <pre>
+                <code>
+                    "scripts": {
+                        "start-dev": "cross-env PORT=3000 nodemon app.js",
+                        "start": "node app.js"
+                      },
+                </code>
+            </pre>
+            
+            
+            </p>
+            </section>
+            <section id="jparser">
+            <p class="jparser-class">
+                <h3>Json parser</h3>
+                In order to be able to parse json in express you must configure it through the "app" object.<br>
+                This can be done in a simple line:<br>
+                <code>app.use(express.json())</code><br>
+                This is important to do when creating REST apis. Without it express won't be able to parse json requests
+                and so you will not be able to use data recieved through requests using GET, PUT etc.
+             
+            </p>
+            </section>
+            <section id="endpoint">
+            <p class="endpoint-class">
+                <h3>Endpoints</h3>
+                Endpoints are a way of defining an "access point" for a client to communicate with the express server.
+                                An endpoint consists of a URI and a specific HTTP request method
+                                like <code>GET</code> <code>POST</code> and
+                                so on.
+            
+                                Endpoints are created by calling the HTTP specific verb on the app variable:<br><br>
+                                <code>app.get</code><br>
+                                <code>app.put</code><br>
+                                <code>app.delete</code><br>
+                                and so on...<br><br>
+            
+                                An endpoint will take the arguments of a path and a callback.<br><br>
+                                In the callback you provide the parameter "req" and "res" which can be used to interact with the
+                                incoming request or the outgoing response.<br>
+                  
+                </p>
+            </section>
+            <section id="req-res">
+                <p class="req-res-class">
+                    <h3>Request and response</h3>
+                         Request and Response object both are the callback function parameters and are used for Express.js and Node.js. You can get the request query, 
+                         params, body, headers, and cookies. It can overwrite any value or anything there. However, overwriting headers or cookies will not affect the output back to the browser.
+                        Through the request it is possible to interact with an incoming query string,
+                        and through the response it is possible to send it back to the client as a string.<br><br>
+                    <pre>
+                        <code>
+                            app.get("/express", (req, res) => {
+                                res.send(expressPage);
+                            });
+                        </code>
+                    </pre>
+                    </p>
+                </section>
+            
+                <section id="static">
+                    <p class="static-class">
+                        <h3>Static content</h3>
+                        "Static content is any content that can be delivered to an end user without having to be generated,
+                                modified, or processed."<br><br>
+                                Static content can be html pages, images or files.<br><br>
+            
+                                The client is by default not allowed to access server files in express. Therefore the server must be
+                                configured to allow this.
+                                This is done by telling the server to allow a specific directory (and sub-directories) to be served <br><br>
+                          <code>
+                            app.use(express.static("public"));
+                          </code>
+                        </p>
+                    </section>
+
+    </div>
+</div>
+
 </body>
 </html>

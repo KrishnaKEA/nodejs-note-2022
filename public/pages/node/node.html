@@ -1,5 +1,5 @@
 
-    <div class="card container-contents bg-light tableofcontent">
+    <div class="card container-contents">
         <h5>Topics</h5>
         <ul>
             <li><a href="#intro">Introduction</a></li>
@@ -17,157 +17,162 @@
         </ul>
     </div>
 </div>
-<section id="intro">
-    <p class="intro-class">
-        <h3>Introduction</h3>
-        Node.js is an open-source and cross-platform runtime environment built on Chrome’s V8 JavaScript engine for executing JavaScript code outside of a browser. You need to recollect that NodeJS isn’t a framework, and it’s not a programing language. It provides an event-driven, non-blocking (asynchronous) I/O and cross-platform runtime environment for building highly scalable server-side applications using JavaScript.
-        
-    </p>
-</section>
-<section id="why">
-    <p class="why-class">
-        <h3>Why node.js?</h3>
-        There could be several reasons to choose node.js. Here are the top reasons which are listed below.
-        <ul>
-            <li>Open-source and cross-platform</li>
-            <li>Easy to scale up in the future</li>
-            <li>Easy to learn</li>
-            <li>Huge community support</li>
-            <li>Fast</li>
-            <li>Realtime web apps </li>
-        </ul>
-    </p>
-</section>
-<section id="getstarted">
-    <p class="getstarted-class">
-        <h3>Getting started</h3>
-        To be able to work on node.js project we need to install node. Which can be easyly installed <a href="https://nodejs.org/en/download/">nodejs official website</a>.There we could choose the different versions 
-        and different platforms.Installing node to the system it also installs the node package manager (NPM).After the installation we could check if node is properly installed or not,in the command line or terminal
-        type <code> node -v</code>. Then it shows the node version which is installed in the system.<code>v16.13.2</code>. Sometime you may have alreday node installed and you want to update the recent version of node
-        then you just install the newer version which replaces the older version.Then we can check the npm as well by typing <code>npm -v</code> and it shows, something like this.<code>8.1.2</code>
-    </p>
-</section>
-</section>
-<section id="npm">
-    <p class="npm-class">
-        <h3>Node package manager(npm)</h3>
-       Node package manager is the default package manager for the javascript runtime environment node.js.It consists of a command line client, also called npm, and an online database of public and paid-for private packages, 
-       called the npm registry. The registry is accessed via the client, and the available packages can be browsed and searched via the npm website. The package manager and the registry are managed by npm, Inc.Which is written
-       in JavaScript.
-    </p>
-</section>
-<section id="node">
-    <p class="node-class">
-        <h3>Node-command</h3>
-            After successfully installation of node on our machine we can type command <code>node</code>in terminal, which allows to write our javascript out of the browser. Before we were only allowed to use javascript in browser 
-            but now with the help of node we are able to run javascript anywhere.This is a beauty of node.
-        <pre>
-            <code>
-                macbook@Developer-Krishna Nodejs-note % node
-                Welcome to Node.js v16.13.2.
-                Type ".help" for more information.
-                > 3+3
-                6
-            </code> 
-        </pre>
-      
-    </p>
-</section>
-
-<section id="package">
-    <p class="package-class">
-        <h3>Package.json</h3>
-        The package.json is a json file that all npm packages contains, usually in the root directory.<br>
-        The file holds metadata relevant to the project.<br>
-        This could be the project name, version, needed dependencies and so on.<br><br>
-        Following the JSON data format the fields are divided into key:value pairs,<br>
-        with the possibility for objects, like the dependencies object, to hold multiple key:value pairs.
-        <pre>
-            <code>
-                {
-                    "name": "nodejs-note",
-                    "version": "1.0.0",
-                    "description": "This is the mandatory assignment project in fourth semester2022",
-                    "main": "app.js",
-                    "scripts": {
-                      "test": "echo \"Error: no test specified\" && exit 1"
-                    },
-                    "keywords": [
-                      "note",
-                      "node",
-                      "express"
-                    ],
-                    "author": "Krishna Prasad Khanal",
-                    "license": "MIT",
-                    "dependencies": {
-                      "express": "^4.17.3",
-                      "g": "^2.0.1",
-                      "nodemon": "^2.0.15"
-                    }
-                  }
-            </code>
-        </pre>
-    </p>
-</section>
-<section id="npm-init">
-    <p class="npm-init-class">
-        <h3>npm init</h3>
-      <code>npm init</code> 
-      command can be used to create a package.json file from scratch, if no such file exists.<br><br>
-        When running the command with no arguments,
-      a short guide appears asking you questions to help populate the resulting package.json.<br>
-      As an example you will be asked to name the package, provide a version (1.0.0 by default),
-      provide an url to the git repository (if any) etc.<br>
-    </p>
-</section>
-<section id="npm-install">
-    <p class="npm-install-class">
-        <h3>npm install</h3>
-          <code>npm install</code> 
-          command is used to create a package.json file from scratch, if no such file exists.<br><br>
-            When running the command with no arguments,
-          a short guide appears asking you questions to help populate the resulting package.json.<br>
-          As an example you will be asked to name the package, provide a version (1.0.0 by default),
-          provide an url to the git repository (if any) etc.<br>
-        </p>
-    </section>
-    <section id="npm-run">
-        <p class="npm-run-class">
-            <h3>npm install</h3>
-              <code>npm run</code> 
-              This command will run an arbitrary command from the package.json file.<br><br>
-                    Commands can be specified in the <code class="language-json">"scripts"</code> object,
-                    which can contain multiple commands<br><br>
-                    If no command name is specified as an argument, a list of available commands (if any) will be
-                    returned.
+<div class="card">
+    <div class="card-body">
+        <section id="intro">
+            <p class="intro-class">
+                <h3>Introduction</h3>
+                Node.js is an open-source and cross-platform runtime environment built on Chrome’s V8 JavaScript engine for executing JavaScript code outside of a browser. You need to recollect that NodeJS isn’t a framework, and it’s not a programing language. It provides an event-driven, non-blocking (asynchronous) I/O and cross-platform runtime environment for building highly scalable server-side applications using JavaScript.
+                
             </p>
         </section>
-
-        <section id="nodemon">
-            <p class="nodemon-class">
-                <h3>nodemon</h3>
-                  This command will run an arbitrary command from the package.json file.<br><br>
-                        Commands can be specified in the <code class="language-json">"scripts"</code> object,
-                        which can contain multiple commands
-                        If no command name is specified as an argument, a list of available commands (if any) will be
-                        returned."Nodemon is a tool that helps develop node.js based applications
-                        by automatically restarting the node application when file changes in the directory are
-                        detected."This makes it a very useful development tool as any files changes will cause nodemon to re-run your application,
-                        making your changes available without the hassle of stopping the running node process and starting
-                        it again.To run a javascript file through nodemon you replace the normal the node command with
-                        nodemon.Nodemon is recommended to be installed globally, but can also be installed as a development
-                        dependency.
-                        If installed globally it will be available to be run by every Node.js project on the system.
-                        If installed locally as a development dependency,
-                        it will only be available to the speific project in which it was installed.<br><br>
-                        <h6>Global install</h6>
-                        <code>npm install -g nodemon</code><br>
-                        <h6>Local install as development dependency</h6>
-                        <code>npm install --save-dev nodemon</code><br>
+        <section id="why">
+            <p class="why-class">
+                <h3>Why node.js?</h3>
+                There could be several reasons to choose node.js. Here are the top reasons which are listed below.
+                <ul>
+                    <li>Open-source and cross-platform</li>
+                    <li>Easy to scale up in the future</li>
+                    <li>Easy to learn</li>
+                    <li>Huge community support</li>
+                    <li>Fast</li>
+                    <li>Realtime web apps </li>
+                </ul>
+            </p>
+        </section>
+        <section id="getstarted">
+            <p class="getstarted-class">
+                <h3>Getting started</h3>
+                To be able to work on node.js project we need to install node. Which can be easyly installed <a href="https://nodejs.org/en/download/">nodejs official website</a>.There we could choose the different versions 
+                and different platforms.Installing node to the system it also installs the node package manager (NPM).After the installation we could check if node is properly installed or not,in the command line or terminal
+                type <code> node -v</code>. Then it shows the node version which is installed in the system.<code>v16.13.2</code>. Sometime you may have alreday node installed and you want to update the recent version of node
+                then you just install the newer version which replaces the older version.Then we can check the npm as well by typing <code>npm -v</code> and it shows, something like this.<code>8.1.2</code>
+            </p>
+        </section>
+        </section>
+        <section id="npm">
+            <p class="npm-class">
+                <h3>Node package manager(npm)</h3>
+               Node package manager is the default package manager for the javascript runtime environment node.js.It consists of a command line client, also called npm, and an online database of public and paid-for private packages, 
+               called the npm registry. The registry is accessed via the client, and the available packages can be browsed and searched via the npm website. The package manager and the registry are managed by npm, Inc.Which is written
+               in JavaScript.
+            </p>
+        </section>
+        <section id="node">
+            <p class="node-class">
+                <h3>Node-command</h3>
+                    After successfully installation of node on our machine we can type command <code>node</code>in terminal, which allows to write our javascript out of the browser. Before we were only allowed to use javascript in browser 
+                    but now with the help of node we are able to run javascript anywhere.This is a beauty of node.
+                <pre>
+                    <code>
+                        macbook@Developer-Krishna Nodejs-note % node
+                        Welcome to Node.js v16.13.2.
+                        Type ".help" for more information.
+                        > 3+3
+                        6
+                    </code> 
+                </pre>
+              
+            </p>
+        </section>
+        
+        <section id="package">
+            <p class="package-class">
+                <h3>Package.json</h3>
+                The package.json is a json file that all npm packages contains, usually in the root directory.<br>
+                The file holds metadata relevant to the project.<br>
+                This could be the project name, version, needed dependencies and so on.<br><br>
+                Following the JSON data format the fields are divided into key:value pairs,<br>
+                with the possibility for objects, like the dependencies object, to hold multiple key:value pairs.
+                <pre>
+                    <code>
+                        {
+                            "name": "nodejs-note",
+                            "version": "1.0.0",
+                            "description": "This is the mandatory assignment project in fourth semester2022",
+                            "main": "app.js",
+                            "scripts": {
+                              "test": "echo \"Error: no test specified\" && exit 1"
+                            },
+                            "keywords": [
+                              "note",
+                              "node",
+                              "express"
+                            ],
+                            "author": "Krishna Prasad Khanal",
+                            "license": "MIT",
+                            "dependencies": {
+                              "express": "^4.17.3",
+                              "g": "^2.0.1",
+                              "nodemon": "^2.0.15"
+                            }
+                          }
+                    </code>
+                </pre>
+            </p>
+        </section>
+        <section id="npm-init">
+            <p class="npm-init-class">
+                <h3>npm init</h3>
+              <code>npm init</code> 
+              command can be used to create a package.json file from scratch, if no such file exists.<br><br>
+                When running the command with no arguments,
+              a short guide appears asking you questions to help populate the resulting package.json.<br>
+              As an example you will be asked to name the package, provide a version (1.0.0 by default),
+              provide an url to the git repository (if any) etc.<br>
+            </p>
+        </section>
+        <section id="npm-install">
+            <p class="npm-install-class">
+                <h3>npm install</h3>
+                  <code>npm install</code> 
+                  command is used to create a package.json file from scratch, if no such file exists.<br><br>
+                    When running the command with no arguments,
+                  a short guide appears asking you questions to help populate the resulting package.json.<br>
+                  As an example you will be asked to name the package, provide a version (1.0.0 by default),
+                  provide an url to the git repository (if any) etc.<br>
                 </p>
             </section>
-    
-
+            <section id="npm-run">
+                <p class="npm-run-class">
+                    <h3>npm run</h3>
+                      <code>npm run</code> 
+                      This command will run an arbitrary command from the package.json file.<br><br>
+                            Commands can be specified in the <code class="language-json">"scripts"</code> object,
+                            which can contain multiple commands<br><br>
+                            If no command name is specified as an argument, a list of available commands (if any) will be
+                            returned.
+                    </p>
+                </section>
+        
+                <section id="nodemon">
+                    <p class="nodemon-class">
+                        <h3>nodemon</h3>
+                          This command will run an arbitrary command from the package.json file.<br><br>
+                                Commands can be specified in the <code class="language-json">"scripts"</code> object,
+                                which can contain multiple commands
+                                If no command name is specified as an argument, a list of available commands (if any) will be
+                                returned."Nodemon is a tool that helps develop node.js based applications
+                                by automatically restarting the node application when file changes in the directory are
+                                detected."This makes it a very useful development tool as any files changes will cause nodemon to re-run your application,
+                                making your changes available without the hassle of stopping the running node process and starting
+                                it again.To run a javascript file through nodemon you replace the normal the node command with
+                                nodemon.Nodemon is recommended to be installed globally, but can also be installed as a development
+                                dependency.
+                                If installed globally it will be available to be run by every Node.js project on the system.
+                                If installed locally as a development dependency,
+                                it will only be available to the speific project in which it was installed.<br><br>
+                                <h6>Global install</h6>
+                                <code>npm install -g nodemon</code><br>
+                                <h6>Local install as development dependency</h6>
+                                <code>npm install --save-dev nodemon</code><br>
+                        </p>
+                    </section>
+            
+        
+        
+    </div>
+</div>
 
 
 
