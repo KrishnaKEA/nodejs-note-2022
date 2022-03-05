@@ -21,3 +21,6 @@ section {
 #navbar {
 	background-color: aqua !important;
 }
+.card{
+	padding:10px;
+}
