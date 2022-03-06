@@ -1,11 +1,15 @@
+
+// importing express
 const express = require("express");
+// initializing express
 const app = express();
-
+// mentioning the static pages to express so that the server can accesss the files.
 app.use(express.static("public"));
-
+// importing file system module 
 const fs = require("fs");
-const nav = fs.readFileSync("./public/components/navbar.html").toString();
 
+// reading the files from html pages and converting to the string 
+const nav = fs.readFileSync("./public/components/navbar.html").toString();
 const home = fs.readFileSync("./public/pages/home/home.html").toString();
 const javascript = fs
 	.readFileSync("./public/pages/javascript/javascript.html")
@@ -32,22 +36,24 @@ const expressPage =
 		.replace("%%DOCUMENT_TITLE%%", "Express js")
 		.replace("%%CSS_LINK%%", "style") + exp;
 
-//const nodejsPage = nav.replace("%%DOCUMENT_TITLE%%", "Node js") + node;
-
+// Get route for home page
 app.get("/", (req, res) => {
 	res.send(homePage);
 });
-
+// Get route for javascript page
 app.get("/javascript", (req, res) => {
 	res.send(javascriptPage);
 });
-
+// Get route to nodjspage
 app.get("/node", (req, res) => {
 	res.send(nodejsPage);
 });
-
+// get route to express page 
 app.get("/express", (req, res) => {
 	res.send(expressPage);
 });
 
-app.listen(3000, () => console.log("Server is running on", 3000));
+// assigning port and fall back port 3000
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT, () => console.log("Server is running on", PORT));
